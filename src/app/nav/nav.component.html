@@ -1,0 +1,30 @@
+<mat-toolbar *ngIf="showNavbar">
+    <span>Rafa Distributors</span>
+    <div class="spacer"></div>
+    <div class="links" *ngIf="!(isAdmin)">
+        <a mat-button routerLink="/">Home</a>
+        <a mat-button>About</a>
+        <a mat-button>Shop</a>
+    </div>
+    <div class="buttons">
+        
+        <div class="button-wrapper" *ngIf="!(accountservice.currentUser$ | async)">
+            <button mat-raised-button color="warn" routerLink="/login">Login</button>
+        </div>
+        <div class="button-wrapper" *ngIf="!(accountservice.currentUser$ | async)">
+            <button mat-stroked-button color="warn" routerLink="/register">Sign Up</button>
+        </div>
+        <button mat-button [matMenuTriggerFor]="menu"  *ngIf="accountservice.currentUser$ | async">Menu</button>
+        <mat-menu #menu="matMenu">
+      <button mat-menu-item> Manage Account </button>
+      <button mat-menu-item (click)="logout()"> Logout </button>
+    </mat-menu>
+    </div>
+  
+</mat-toolbar>
+
+
+
+
+
+ 

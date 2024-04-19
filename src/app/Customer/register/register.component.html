@@ -1,0 +1,57 @@
+<span></span>
+<div>
+    <h2>Create Account</h2>
+<p>Please fill in your personal information below</p>
+</div>
+
+<form #registerForm="ngForm">
+    <mat-grid-list cols="2" rowHeight="12:2">
+        <mat-grid-tile> 
+            <mat-form-field class="example-full-width">
+            <mat-label> Name </mat-label>
+            <input matInput placeholder="Customer Name">
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>    
+      <mat-form-field class="example-full-width">
+        <mat-label> Surname </mat-label>
+        <input matInput placeholder="Surname">
+      </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>     
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                       placeholder="Ex. pat@example.com">
+                <mat-hint>Valid email!</mat-hint>
+                @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                  <mat-error>Please enter a valid email address</mat-error>
+                }
+                @if (emailFormControl.hasError('required')) {
+                  <mat-error>Email is <strong>required</strong></mat-error>
+                }
+              </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>  
+            <mat-form-field class="example-full-width">
+                <mat-label>Telephone</mat-label>
+                <span matTextPrefix>+27 &nbsp;</span>
+                <input type="tel" matInput placeholder="555-555-1234">
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>  
+            <mat-form-field class="example-full-width">
+              <mat-label> Surname </mat-label>
+              <input matInput placeholder="Surname">
+            </mat-form-field>
+              </mat-grid-tile>
+      </mat-grid-list>
+
+       
+   
+  
+ 
+</form>
