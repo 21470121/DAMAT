@@ -17,7 +17,7 @@ $EmberSystem-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $EmberSystem-warn: mat.define-palette(mat.$red-palette);
-
+$custom-border-color: mat.define-palette(mat.$orange-palette);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $EmberSystem-theme: mat.define-light-theme((
@@ -25,6 +25,7 @@ $EmberSystem-theme: mat.define-light-theme((
     primary: $EmberSystem-primary,
     accent: $EmberSystem-accent,
     warn: $EmberSystem-warn,
+    border: $custom-border-color
   ),
   typography: mat.define-typography-config(),
   density: 0
@@ -39,3 +40,8 @@ $EmberSystem-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-card.custom-theme {
+  border-color: mat.get-color-from-palette($custom-border-color, 500); 
+  border-width: 1px; 
+  border-style: solid; 
+}

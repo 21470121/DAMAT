@@ -1,11 +1,11 @@
-
-<app-nav *ngIf="showNavbar"></app-nav>
+<app-nav></app-nav>
+<!-- <app-nav *ngIf="showNavbar"></app-nav> -->
 <div *ngIf="!showSidebar">
   <router-outlet></router-outlet>
 </div>
 
 
-<mat-drawer-container autosize *ngIf="showSidebar">
+<mat-drawer-container autosize *ngIf="showSidebar" >
   <mat-drawer #drawer opened="true" mode="side" position="start">
   <mat-nav-list>
       <mat-list-item>

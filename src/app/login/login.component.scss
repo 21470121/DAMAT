@@ -4,3 +4,85 @@ host {
     justify-content: center;
   align-items: center;
   }
+
+  // #googlesignin{
+  //   height: 44px;
+  //   width: auto;
+  // }
+
+
+  .login-container {
+    display: flex;
+    height: 90vh;
+  }
+  
+  .left-content {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative; 
+  }
+  
+  .right-content {
+    flex: 1; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .right-content form {
+    margin-bottom: 20px; /* Optional: Add margin at the bottom of the form */
+  }
+  
+  .button-wrapper {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Set width to 100% */
+  }
+
+  .mat-form-field-wrapper {
+    width: 100%; /* Set width to 100% */
+  }
+
+  #mat-card{
+    padding: 50px;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+.left-content img {
+  position: absolute; /* Add this */
+  bottom: 0; /* Add this */
+  left: 50%; /* Add this */
+  transform: translateX(-50%); /* Add this */
+  max-width: 100%; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.bottom-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Distribute space between items */
+  margin-top: 16px; /* Adjust margin as needed */
+}
+
+.left-text {
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+.right-link {
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+.spacer {
+  flex-grow: 1; /* Allow the spacer to take up all available space */
+}
